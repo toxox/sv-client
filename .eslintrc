@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["prettier"],
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/destructuring-assignment": "off"
+  },
+  "globals": {
+    "document": true,
+    "localStorage": true
+  },
+  "parser": "babel-eslint"
+}
