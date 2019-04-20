@@ -59,7 +59,7 @@ class Room extends Component {
               id="video-player"
               src={`https://www.youtube.com/embed/${
                 this.props.videoId
-              }?autoplay=1`}
+              }?autoplay=1&mute=1`}
               frameBorder="0"
             />
           </div>
