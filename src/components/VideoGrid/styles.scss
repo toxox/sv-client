@@ -1,0 +1,16 @@
+#video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 3em 2em;
+  align-items: center;
+  justify-content: start;
+
+  .card {
+    margin: 0;
+    height: 100%;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}

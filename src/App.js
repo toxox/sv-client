@@ -5,6 +5,8 @@ import axios from 'axios';
 import ActionCable from 'actioncable';
 import Page from './components/Page';
 
+import Dashboard from './components/Dashboard';
+
 class App extends Component {
   state = {
     user: null,
@@ -59,30 +61,10 @@ class App extends Component {
   };
 
   render() {
-    console.log(process.env);
     return (
       <div className="App">
         <Page>
-          {this.state.user ? 'logged in' : 'not logged in'}
-
-          <br />
-          <br />
-          <br />
-          <br />
-          <input
-            value={this.newMessage}
-            onChange={e => this.setState({ newMessage: e.target.value })}
-          />
-          <button onClick={this.send}>send message</button>
-
-          {this.state.messages.map(message => {
-            return (
-              <p key={message.id}>
-                <strong>{message.user.nickname}: </strong>
-                {message.body}
-              </p>
-            );
-          })}
+          <Dashboard />
         </Page>
       </div>
     );
