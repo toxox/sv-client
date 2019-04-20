@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import getColor from 'string-to-color';
 import './styles.scss';
 
@@ -15,6 +16,15 @@ const Message = ({ message }) => {
       {message.body}
     </div>
   );
+};
+
+Message.propTypes = {
+  message: PropTypes.shape({
+    body: PropTypes.string.isRequired,
+    user: PropTypes.shape({
+      nickname: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default Message;

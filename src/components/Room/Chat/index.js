@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Input, Button } from 'semantic-ui-react';
 import { room } from '../../../services';
 import Message from '../Message';
 import './styles.scss';
 
 class Room extends Component {
+  static propTypes = {
+    videoId: PropTypes.string.isRequired,
+  };
+
   state = {
     isFetching: false,
     messages: [],

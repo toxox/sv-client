@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
-import { Message, Loader, Container, Header, Segment } from 'semantic-ui-react';
-import { videos, room } from '../../services';
+import PropTypes from 'prop-types';
+import { Message, Loader, Header } from 'semantic-ui-react';
+import { videos } from '../../services';
 import Chat from './Chat';
 import './styles.scss';
 
 class Room extends Component {
+  static propTypes = {
+    videoId: PropTypes.string.isRequired,
+  };
+
   state = {
     isFetching: false,
     error: null,
@@ -17,7 +22,6 @@ class Room extends Component {
       this.setState({ error: 'This stream does not exist', isFetching: false });
       return;
     }
-    console.log(video);
     this.setState({ video, isFetching: false });
   }
 

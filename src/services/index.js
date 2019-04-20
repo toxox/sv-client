@@ -67,7 +67,6 @@ export const videos = {
       const { data } = await axios.get(url);
       return { videosList: data.items };
     } catch (error) {
-      console.log(error);
       return error;
     }
   },
@@ -84,7 +83,6 @@ export const videos = {
       const { data } = await axios.get(url);
       return data.items[0];
     } catch (error) {
-      console.log(error);
       return null;
     }
   },
@@ -102,7 +100,6 @@ export const room = {
       });
       return data;
     } catch (error) {
-      console.log(error);
       return error;
     }
   },
