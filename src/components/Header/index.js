@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 import { Container, Menu, Button } from 'semantic-ui-react';
 import { GoogleLogin } from 'react-google-login';
 import { AuthConsumer } from '../../contexts/auth';
@@ -13,7 +14,10 @@ const AppHeader = () => (
               minHeight: '72px',
             }}
           >
-            <Menu.Item header>Stream Viewer</Menu.Item>
+            <Menu.Item header>
+              <Link to="/">Stream Viewer</Link>
+            </Menu.Item>
+
             {user ? (
               <Menu.Item position="right">
                 <div

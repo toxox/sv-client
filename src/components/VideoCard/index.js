@@ -1,9 +1,11 @@
 import React from 'react';
 import { Card, Image, Button, Popup } from 'semantic-ui-react';
+import './styles.scss';
+import { Link } from '@reach/router';
 
-const VideoCard = ({ video, onClick, isLoggedIn }) => {
+const VideoCard = ({ video, isLoggedIn }) => {
   return (
-    <Card fluid key={video.id.videoId}>
+    <Card fluid>
       <Image src={video.snippet.thumbnails.high.url} />
       <Card.Content>
         <Card.Header>{video.snippet.title}</Card.Header>
@@ -11,9 +13,9 @@ const VideoCard = ({ video, onClick, isLoggedIn }) => {
       </Card.Content>
       <Card.Content extra>
         {isLoggedIn ? (
-          <Button color="violet" onClick={onClick}>
-            Join
-          </Button>
+          <Link to={`/room/${video.id.videoId}`}>
+            <Button color="violet">Join</Button>
+          </Link>
         ) : (
           <Popup
             trigger={<Button color="violet">Join</Button>}

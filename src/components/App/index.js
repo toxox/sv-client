@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
-
 import axios from 'axios';
+import { Router } from '@reach/router';
 import ActionCable from 'actioncable';
-import Page from './components/Page';
 
-import Dashboard from './components/Dashboard';
+import Page from '../Page';
+import Dashboard from '../Dashboard';
+import Room from '../Room';
 
 class App extends Component {
   state = {
@@ -64,7 +64,10 @@ class App extends Component {
     return (
       <div className="App">
         <Page>
-          <Dashboard />
+          <Router>
+            <Dashboard path="/" />
+            <Room path="room/:videoId" />
+          </Router>
         </Page>
       </div>
     );

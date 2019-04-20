@@ -1,4 +1,5 @@
 import React from 'react';
+import { navigate } from '@reach/router';
 import VideoCardPlaceholder from '../VideoCard/VideoCardPlaceholder';
 import VideoCard from '../VideoCard';
 import './styles.scss';
@@ -17,7 +18,11 @@ const VideoGrid = ({ videos, isLoggedIn, isFetching }) => {
     <div id="video-grid">
       {videos.map(video => {
         return (
-          <VideoCard video={video} isLoggedIn={isLoggedIn} onClick={() => {}} />
+          <VideoCard
+            key={video.id.videoId}
+            video={video}
+            isLoggedIn={isLoggedIn}
+          />
         );
       })}
     </div>

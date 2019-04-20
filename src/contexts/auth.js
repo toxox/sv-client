@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { navigate } from '@reach/router';
 import { auth } from '../services';
 
 const Auth = React.createContext({});
@@ -34,6 +35,7 @@ export class AuthProvider extends Component {
       user: null,
       isFetching: false,
     });
+    navigate('/');
   };
 
   render() {
