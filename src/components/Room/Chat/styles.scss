@@ -1,0 +1,30 @@
+#chat {
+  background: #faf9fa;
+  border: 1px solid #dad8de;
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-height: 500px;
+  height: 500px;
+
+  #messages {
+    overflow-y: auto;
+  }
+
+  @media (min-width: 768px) {
+    border-radius: 0 0 6px 6px;
+    border-top: 0;
+    height: calc(100vh - 70px);
+    max-height: initial;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

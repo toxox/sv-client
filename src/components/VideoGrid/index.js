@@ -1,7 +1,6 @@
 import React from 'react';
-import { navigate } from '@reach/router';
-import VideoCardPlaceholder from '../VideoCard/VideoCardPlaceholder';
-import VideoCard from '../VideoCard';
+import VideoCardPlaceholder from './VideoCard/VideoCardPlaceholder';
+import VideoCard from './VideoCard';
 import './styles.scss';
 
 const VideoGrid = ({ videos, isLoggedIn, isFetching }) => {

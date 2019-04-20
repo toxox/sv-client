@@ -12,7 +12,8 @@
     "react-google-login": "^5.0.4",
     "react-scripts": "2.1.8",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.86.0"
+    "semantic-ui-react": "^0.86.0",
+    "string-to-color": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

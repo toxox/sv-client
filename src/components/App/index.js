@@ -62,14 +62,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Page>
-          <Router>
-            <Dashboard path="/" />
-            <Room path="room/:videoId" />
-          </Router>
-        </Page>
-      </div>
+      //   <div className="App">
+      <Page>
+        <Router>
+          <Dashboard path="/" />
+          <Room path="room/:videoId" />
+        </Router>
+      </Page>
+      //   </div>
     );
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from '@reach/router';
 import { Container, Menu, Button } from 'semantic-ui-react';
 import { GoogleLogin } from 'react-google-login';
-import { AuthConsumer } from '../../contexts/auth';
+import { AuthConsumer } from '../../../contexts/auth';
 
 const AppHeader = () => (
   <AuthConsumer>
